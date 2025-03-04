@@ -1,7 +1,8 @@
+import TopHundertList from "@/components/stations/TopHundertList";
+
 export default function Home() {
+
   return (
-    <div>
-      HOME
-    </div>
+    <TopHundertList />
   );
 }
