@@ -2,7 +2,11 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
-    domains: ["station-images-prod.radio-assets.com"],
+    remotePatterns: [
+      {
+        hostname: "station-images-prod.radio-assets.com"
+      }
+    ]
   }
 };
 
