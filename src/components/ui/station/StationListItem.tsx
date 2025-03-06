@@ -25,10 +25,6 @@ export default function StationListItem({ genres, name, logo44x44, id }: Station
                     {genres?.map((genre, index) => <p className="text-gray-400 inline" key={id + index + genre}>{genre} </p>)}
                 </div>
             </div>
-
-            <div className="flex flex-row gap-4">
-                Details
-            </div>
         </Link>
     );
 }
