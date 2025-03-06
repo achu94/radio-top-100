@@ -1,6 +1,6 @@
-import { RadioStation } from "@/lib/types/stations";
+import { RadioStationDetails } from "@/lib/types/stations";
 
-export async function fetchStationDetails(stationId: string): Promise<RadioStation> {
+export async function fetchStationDetails(stationId: string): Promise<RadioStationDetails> {
 
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
     const response = await fetch(`${baseUrl}/api/station/${stationId}`);
@@ -11,5 +11,5 @@ export async function fetchStationDetails(stationId: string): Promise<RadioStati
 
     const stationDetails = await response.json();
 
-    return stationDetails.stationDetails[0];
+    return stationDetails;
 }
