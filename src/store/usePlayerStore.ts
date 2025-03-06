@@ -6,6 +6,7 @@ interface PlayerState {
     isPlaying: boolean;
     isLoading: boolean;
     currentStationId: string | null;
+    currentStreamUrl: string | null;
     hlsInstance: Hls | null;
     actions: {
         playStation: (stationId: string, streamUrl: string) => void;
@@ -17,6 +18,7 @@ const usePlayerStore = create<PlayerState>((set, get) => ({
     isPlaying: false,
     isLoading: false,
     currentStationId: null,
+    currentStreamUrl: null,
     hlsInstance: null,
 
     actions: {
@@ -46,6 +48,7 @@ const usePlayerStore = create<PlayerState>((set, get) => ({
                 set({
                     isPlaying: true,
                     currentStationId: stationId,
+                    currentStreamUrl: streamUrl,
                     hlsInstance: newHls,
                 });
 
@@ -60,11 +63,12 @@ const usePlayerStore = create<PlayerState>((set, get) => ({
                 set({
                     isPlaying: false,
                     currentStationId: null,
+                    currentStreamUrl: null,
                     hlsInstance: null,
                     isLoading: false,
                 });
 
-                console?.error("HLS Error:", data);
+                console.error("HLS Error:", data);
             });
 
             // hls.js dont have event, which triggers on stream-play.
@@ -91,3 +95,5 @@ export const useCurrentStation = () => usePlayerStore((state) => state.currentSt
 export const useIsPlaying = () => usePlayerStore((state) => state.isPlaying);
 export const useIsLoading = () => usePlayerStore((state) => state.isLoading); // Neuer Selektor
 export const usePlayerActions = () => usePlayerStore((state) => state.actions);
+export const useCurrentStationId = () => usePlayerStore((state) => state.currentStationId);
+export const useCurrentStreamUrl = () => usePlayerStore((state) => state.currentStreamUrl);
