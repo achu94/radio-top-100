@@ -4,7 +4,7 @@ import Hls from "hls.js";
 
 interface PlayerState {
     isPlaying: boolean;
-    isLoading: boolean; // Neuer Ladezustand
+    isLoading: boolean;
     currentStationId: string | null;
     hlsInstance: Hls | null;
     actions: {
@@ -15,7 +15,7 @@ interface PlayerState {
 
 const usePlayerStore = create<PlayerState>((set, get) => ({
     isPlaying: false,
-    isLoading: false, // Initialer Ladezustand
+    isLoading: false,
     currentStationId: null,
     hlsInstance: null,
 
@@ -23,32 +23,25 @@ const usePlayerStore = create<PlayerState>((set, get) => ({
         playStation: (stationId, streamUrl) => {
             const { hlsInstance, currentStationId, isLoading } = get();
 
-            // Verhindere Mehrfachklicks während des Ladens
             if (isLoading) return;
 
-            // Wenn dieselbe Station angeklickt wird, toggle play/pause
             if (currentStationId === stationId) {
                 set((state) => ({ isPlaying: !state.isPlaying }));
                 return;
             }
 
-            // Stoppe vorherige Station
             if (hlsInstance) {
                 hlsInstance.destroy();
             }
 
-            // Setze den Ladezustand
             set({ isLoading: true });
 
-            // Erstelle eine neue HLS-Instanz
             const newHls = new Hls();
             const audioElement = new Audio();
 
-            // HLS-Stream laden
             newHls.loadSource(streamUrl);
             newHls.attachMedia(audioElement);
 
-            // Wenn der Stream bereit ist, abspielen
             newHls.on(Hls.Events.MANIFEST_PARSED, () => {
                 set({
                     isPlaying: true,
@@ -63,7 +56,6 @@ const usePlayerStore = create<PlayerState>((set, get) => ({
                 audioElement.remove();
             });
 
-            // Fehlerbehandlung
             newHls.on(Hls.Events.ERROR, (event, data) => {
                 set({
                     isPlaying: false,
@@ -94,7 +86,7 @@ const usePlayerStore = create<PlayerState>((set, get) => ({
     },
 }));
 
-// Selektoren
+// Selectors
 export const useCurrentStation = () => usePlayerStore((state) => state.currentStationId);
 export const useIsPlaying = () => usePlayerStore((state) => state.isPlaying);
 export const useIsLoading = () => usePlayerStore((state) => state.isLoading); // Neuer Selektor
