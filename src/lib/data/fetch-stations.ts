@@ -2,7 +2,8 @@ import { StationsResponse, RadioStation } from "../types/stations";
 
 export async function getTopHundert(): Promise<RadioStation[]> {
     try {
-        const response = await fetch(`${process.env.STATIONS_API_MOCK}`);
+        const baseUrl = process.env.STATIONS_API_MOCK || 'http://localhost:3000';
+        const response = await fetch(baseUrl);
 
         if (!response.ok) {
             throw new Error(`Top 100 API is unavailable. Status: ${response.status}`);
