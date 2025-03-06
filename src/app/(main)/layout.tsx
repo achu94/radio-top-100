@@ -15,10 +15,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`antialiased min-h-screen`}
+        className={`antialiased  bg-clip-text text-transparent`}
       >
         <Header />
-        {children}
+        <main className="min-h-screen">
+          {children}
+        </main>
       </body>
     </html>
   );

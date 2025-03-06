@@ -38,7 +38,7 @@ export const PlayerControls = ({
 
     return (
         <div
-            className="group relative overflow-hidden rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+            className="group mx-auto relative overflow-hidden rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl"
             style={{ width: imageSize, height: imageSize }}
         >
             <Image

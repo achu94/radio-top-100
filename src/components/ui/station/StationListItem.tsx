@@ -7,22 +7,28 @@ import { StationButtonProps } from "@/lib/types/stations"
 
 export default function StationListItem({ genres, name, logo44x44, id }: StationButtonProps) {
     return (
-        <div className="flex flex-row justify-between p-2">
-            <Link
-                href={`/station/${id}`}
-            >
-                <div className="flex flex-row justify-between gap-1">
-                    <Image src={logo44x44} alt={`Station ${name}`} width={44} height={44} />
-                    <div>
-                        <p>{name}</p>
-                        {genres?.map((genre, index) => <p className="text-gray-400 inline" key={id + index + genre}>{genre} </p>)}
-                    </div>
+        <Link
+            className="flex flex-row justify-between md:basis-md p-2 border-2 border-gray-700 rounded-lg bg-gray-800 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+            href={`/station/${id}`}
+        >
+            <div className="flex flex-row justify-around gap-2 items-center">
+                <Image
+                    src={logo44x44}
+                    alt={`Station 
+                    ${name}`}
+                    width={44}
+                    height={44}
+                    className="w-12 h-12 rounded-lg border-2 border-gray-600 "
+                />
+                <div>
+                    <p>{name}</p>
+                    {genres?.map((genre, index) => <p className="text-gray-400 inline" key={id + index + genre}>{genre} </p>)}
                 </div>
-
-            </Link>
-            <div className="flex flex-row gap-4">
-                <button>PLAY</button>
             </div>
-        </div>
+
+            <div className="flex flex-row gap-4">
+                Details
+            </div>
+        </Link>
     );
 }
