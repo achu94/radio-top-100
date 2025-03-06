@@ -14,17 +14,7 @@ export default function Header() {
     const currentStationId = useCurrentStationId();
     const isPlaying = useIsPlaying();
     const isLoading = useIsLoading();
-    const { playStation, pauseStation } = usePlayerActions();
-
-    const handlePlayPause = () => {
-        if (!currentStationId) return;
-
-        if (isPlaying) {
-            pauseStation();
-        } else {
-            playStation(currentStationId, '');
-        }
-    };
+    const { pauseStation } = usePlayerActions();
 
     return (
         <header className="w-full bg-gray-800/90 backdrop-blur-md border-b border-gray-700 sticky top-0 z-50">
