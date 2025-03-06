@@ -22,7 +22,10 @@ export default function StationListItem({ genres, name, logo44x44, id }: Station
                 />
                 <div>
                     <p>{name}</p>
-                    {genres?.map((genre, index) => <p className="text-gray-400 inline" key={id + index + genre}>{genre} </p>)}
+                    {genres
+                        ? genres.map((genre, index) => <p className="text-gray-400 inline" key={id + index + genre}>{genre} </p>)
+                        : <p className="text-gray-400 inline">Missing</p>
+                    }
                 </div>
             </div>
         </Link>
