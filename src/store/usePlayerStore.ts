@@ -75,7 +75,8 @@ const usePlayerStore = create<PlayerState>((set, get) => ({
                 console?.error("HLS Error:", data);
             });
 
-
+            // hls.js dont have event, which triggers on stream-play.
+            // Im using this setTimeout to prevent pause bevore the station is playing
             setTimeout(() => {
                 set({
                     isLoading: false
