@@ -85,7 +85,7 @@ const usePlayerStore = create<PlayerState>((set, get) => ({
             if (hlsInstance) {
                 hlsInstance.destroy();
             }
-            set({ isPlaying: false, currentStationId: null, hlsInstance: null });
+            set({ isPlaying: false, currentStationId: null, currentStreamUrl: null, hlsInstance: null });
         },
     },
 }));
