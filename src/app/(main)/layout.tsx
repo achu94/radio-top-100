@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Header from "@/components/ui/layout/Header";
 
 export const metadata: Metadata = {
   title: "Radio Top100",
@@ -16,6 +17,7 @@ export default function RootLayout({
       <body
         className={`antialiased min-h-screen`}
       >
+        <Header />
         {children}
       </body>
     </html>
