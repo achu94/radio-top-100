@@ -17,20 +17,25 @@ export default async function TopHundertList() {
         )
     }
 
-
     return (
-        <div className="flex flex-col justify-center">
-            {
-                topHundertStations.map((station: RadioStation) => (
-                    <StationListItem
-                        logo44x44={station.logo44x44}
-                        name={station.name}
-                        genres={station.genres}
-                        id={station.id}
-                        key={station.id}
-                    />
-                ))
-            }
+        <div className="bg-gray-900 min-h-screen p-4">
+            <p
+                className="md:text-center text-2xl font-bold mb-4"
+            >Top100 Stations</p>
+            <div className="flex flex-col gap-2 md:flex-row md:flex-wrap md:gap-6 justify-center">
+                
+                {
+                    topHundertStations.map((station: RadioStation) => (
+                        <StationListItem
+                            logo44x44={station.logo44x44}
+                            name={station.name}
+                            genres={station.genres}
+                            id={station.id}
+                            key={station.id}
+                        />
+                    ))
+                }
+            </div>
         </div>
     )
 
