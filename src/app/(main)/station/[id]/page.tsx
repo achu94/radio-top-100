@@ -63,8 +63,8 @@ export default async function Page({
                             rel="noopener noreferrer"
                             className="flex items-center justify-between p-4 bg-gray-800 rounded-xl hover:bg-gray-700 transition-colors"
                         >
-                            <div className="flex items-center gap-3">
-                                <span className="text-left font-mono text-sm text-gray-300 truncate whitespace-break-spaces">
+                            <div className="grid  gap-4">
+                                <span className=" overflow-auto text-left font-mono text-sm text-gray-300 truncate whitespace-break-spaces">
                                     {url}
                                 </span>
                             </div>
