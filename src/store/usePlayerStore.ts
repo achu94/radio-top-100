@@ -68,7 +68,7 @@ const usePlayerStore = create<PlayerState>((set, get) => ({
                     isLoading: false,
                 });
 
-                console.error("HLS Error:", data);
+                console && console.log("HLS Error:", data);
             });
 
             // hls.js dont have event, which triggers on stream-play.

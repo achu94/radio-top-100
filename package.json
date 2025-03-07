@@ -10,10 +10,12 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
+    "clsx": "^2.1.1",
     "hls.js": "^1.5.20",
     "next": "15.2.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "use-debounce": "^10.0.4",
     "zustand": "^5.0.3"
   },
   "devDependencies": {
