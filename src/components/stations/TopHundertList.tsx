@@ -20,17 +20,9 @@ export default async function TopHundertList({
     const topHundertStations: RadioStation[] = await getTopHundert(query, currentPage);
     const totalPages = process.env.TOP_HUNDERT_PAGES ? Number(process.env.TOP_HUNDERT_PAGES) : 5;
 
-    if (topHundertStations.length === 0) {
-        return (
-            <div className="text-center text-gray-500 p-4">
-                No radio stations available.
-            </div>
-        )
-    }
-
     return (
         <div className="bg-gray-900 min-h-screen p-4">
-            <p className="md:text-center text-2xl font-bold mb-4">Top100 Stations</p>
+            <p className="mx-auto text-2xl md:text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent mb-4">Top100 Stations</p>
 
             <div className="mb-4 max-w-80 m-auto">
                 <Search placeholder="Search stations..." />
