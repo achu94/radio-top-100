@@ -1,0 +1,158 @@
+{
+    "stationDetails": [
+        {
+            "id": "msnbc",
+            "name": "MSNBC",
+            "lastModified": 1738246141,
+            "logo44x44": "https://station-images-prod.radio-assets.com/44/msnbc.jpeg?version=bb9415e0814601294d545d3f0b1701f5",
+            "logo100x100": "https://station-images-prod.radio-assets.com/100/msnbc.jpeg?version=bb9415e0814601294d545d3f0b1701f5",
+            "logo175x175": "https://station-images-prod.radio-assets.com/175/msnbc.jpeg?version=bb9415e0814601294d545d3f0b1701f5",
+            "logo300x300": "https://station-images-prod.radio-assets.com/300/msnbc.jpeg?version=bb9415e0814601294d545d3f0b1701f5",
+            "logo630x630": "https://station-images-prod.radio-assets.com/630/msnbc.jpeg?version=bb9415e0814601294d545d3f0b1701f5",
+            "logo1200x1200": "https://station-images-prod.radio-assets.com/1200/msnbc.jpeg?version=bb9415e0814601294d545d3f0b1701f5",
+            "logo2160x2160": "",
+            "strikingColor1": "#0047ff",
+            "strikingColor2": "#0049fe",
+            "hasValidStreams": true,
+            "streams": [
+                {
+                    "url": "https://tunein.cdnstream1.com/3511_96.aac/playlist.m3u8",
+                    "contentFormat": "audio/mpeg",
+                    "status": "VALID"
+                }
+            ],
+            "city": "New York City",
+            "country": "USA",
+            "topics": [
+                "News",
+                "US Election"
+            ],
+            "genres": [
+                "News-Talk"
+            ],
+            "type": "STATION",
+            "description": "Welcome to MSNBC, the premier destination for in-depth analysis, political commentary, and informed perspectives on today's global and national news events. As part of the NBCUniversal News Group, MSNBC broadcasts from the United States to a global audience, offering a continuous stream of coverage on a wide array of topics including politics, health, the economy, and the environment.\n\nMSNBC is a leader in breaking news and original journalism. It does not focus on music or sports but instead prides itself on delivering a robust lineup of live news programming, insightful talk shows, and special reports. With a lineup featuring seasoned journalists and experts, MSNBC provides context and clarity to the world's most complex issues.\n\nListeners and viewers can expect comprehensive coverage, including real-time reporting on breaking news events, in-depth political analysis, and feature segments that go beyond the headlines to explore science, technology, and culture. Leveraging the power of digital media, MSNBC also offers podcasts and streaming content accessible across various platforms, ensuring that audiences can stay informed anytime, anywhere.\n\nMSNBC's content is designed to engage a diverse audience interested in current events, international affairs, and policy discussions. Known for its progressive stance and its slogan, \"This is who we are,\" MSNBC has established itself as a network committed to thorough journalism and powerful storytelling.\n\nThe network is recognized for its distinct perspective on American politics, with a focus on progressive values and advocacy journalism. Its programming slate features a lineup of influential voices and commentators who provide a wide spectrum of viewpoints on the day's most pressing issues.\n\nMSNBC delivers extensive coverage of the 2024 U.S. elections, providing you with up-to-the-minute news on the presidential race, congressional battles, and key state and local elections. With a focus on detailed reporting and analysis, MSNBC ensures you stay informed about the latest developments, from candidate announcements and campaign strategies to policy debates and election results.\nWhile MSNBC's primary commitment is to news and political discourse, it understands the importance of all societal aspects, including cultural, ethical, and social issues. However, it does not specifically focus on religious broadcasting.\n\nProfessional and ever-evolving, MSNBC stands as a bastion of news and analysis for those seeking depth, perspective, and insight into the stories shaping the world. Whether through cable television, online live streaming, or on-demand podcasts, MSNBC ensures that its audience is always connected to the pulse of current affairs and engaged with the narratives driving national and international conversations.",
+            "homepageUrl": "https://www.msnbc.com/",
+            "adParams": "advertising=true&family=NBC&genres=Talk&languages=English&st_city=New York City&st_cont=North America&st_country=USA&st_region=New York&station=msnbc&topics=News&topics=US Election&type=radio_station",
+            "hideReferer": false,
+            "continent": "North America",
+            "languages": [
+                "English"
+            ],
+            "families": [
+                "NBC"
+            ],
+            "region": "New York",
+            "topicTags": [
+                {
+                    "systemName": "News",
+                    "name": "News",
+                    "slug": "news",
+                    "count": 2088
+                },
+                {
+                    "systemName": "US Election",
+                    "name": "US Election",
+                    "slug": "us-election",
+                    "count": 13
+                }
+            ],
+            "genreTags": [
+                {
+                    "systemName": "News-Talk",
+                    "name": "Talk",
+                    "slug": "news-talk",
+                    "count": 2119
+                }
+            ],
+            "cityTag": {
+                "systemName": "New York City",
+                "name": "New York City",
+                "slug": "new-york-city",
+                "count": 404
+            },
+            "parentTag": {
+                "systemName": "",
+                "name": ""
+            },
+            "familyTag": {
+                "systemName": "NBC",
+                "name": "NBC",
+                "slug": "nbc",
+                "count": 4
+            },
+            "languageTags": [
+                {
+                    "systemName": "English",
+                    "name": "English",
+                    "slug": "english",
+                    "count": 17198
+                }
+            ],
+            "regionTag": {
+                "systemName": "New York",
+                "name": "New York",
+                "slug": "new-york",
+                "count": 851
+            },
+            "countryTag": {
+                "systemName": "USA",
+                "name": "USA",
+                "slug": "usa",
+                "count": 9913
+            },
+            "rank": 3,
+            "shortDescription": "MSNBC is an American cable and satellite television network that provides news coverage and political commentary from NBC News on current events.",
+            "enabled": true,
+            "seoRelevantIn": [
+                "en_CA",
+                "es_CO",
+                "da_DK",
+                "es_MX",
+                "en_AU",
+                "de_AT",
+                "it_IT",
+                "pl_PL",
+                "pt_PT",
+                "en_ZA",
+                "pt_BR",
+                "nl_NL",
+                "en_NZ",
+                "fr_FR",
+                "es_ES",
+                "en_IE",
+                "sv_SE",
+                "de_DE",
+                "en_GB",
+                "en_US"
+            ],
+            "relevantIn": [
+                "pt_BR",
+                "en_AU",
+                "fr_FR",
+                "de_AT",
+                "en_CA",
+                "it_IT",
+                "es_MX",
+                "en_NZ",
+                "en_ZA",
+                "es_CO",
+                "nl_NL",
+                "pt_PT",
+                "es_ES",
+                "en_US",
+                "da_DK",
+                "en_IE",
+                "pl_PL",
+                "sv_SE",
+                "de_DE",
+                "en_GB"
+            ],
+            "aliases": [],
+            "blockingInformation": {
+                "isBlocked": false,
+                "isBlockedIn": []
+            }
+        }
+    ]
+}
