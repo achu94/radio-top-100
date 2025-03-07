@@ -20,7 +20,7 @@ export default function Pagination({ totalPages }: { totalPages: number }) {
     const allPages = generatePagination(currentPage, totalPages);
 
     return (
-        <div className="flex items-center justify-center gap-2 mt-8">
+        <div className="flex items-center justify-center gap-2 mt-8 mb-8 p-4">
             {/* Previous Button */}
             <Link
                 href={createPageURL(currentPage - 1)}
