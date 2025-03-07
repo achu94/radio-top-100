@@ -35,7 +35,7 @@ export default function Header() {
                     <div className="flex items-center gap-4">
 
                         {isLoading ? (
-                            <span className="animate-pulse bg-primary rounded-2xl p-2">Loading...</span>
+                            <span className="animate-pulse bg-white rounded-2xl p-2 font-bold bg-gradient-to-r from-blue-400 to-purple-500">Buffering...</span>
                         ) : isPlaying && (
                             <div className='flex items-center gap-4'>
 
@@ -45,10 +45,12 @@ export default function Header() {
                                     <div className="w-1.5 h-4 bg-white animate-bounce" style={{ animationDelay: '0.2s' }} />
                                     <div className="w-1.5 h-2 bg-white animate-bounce" style={{ animationDelay: '0.3s' }} />
                                 </div>
-
+                                <div>
+                                    
+                                </div>
                                 <button
                                     onClick={pauseStation}
-                                    className=" flex items-center gap-5 px-3 py-1.5 bg-primary hover:bg-purple-500 rounded-full text-sm font-medium text-white transition-colors"
+                                    className=" flex items-center gap-5 px-3 py-1.5 font-bold hover:scale-105 rounded-full text-sm bg-gradient-to-r from-blue-400 to-purple-500"
                                 >
                                     Stop
                                 </button>
