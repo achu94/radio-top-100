@@ -2,7 +2,7 @@ import { StationsResponse, RadioStation } from "../types/stations";
 
 export async function getTopHundert(query?: string, currentPage?: number): Promise<RadioStation[]> {
     try {
-        const baseUrl = process.env.STATIONS_API_URL || 'http://localhost:3000';
+        const baseUrl = process.env.STATIONS_API_URL;
 
         const stationsPerPage = 20;
         const count = currentPage ? (currentPage * stationsPerPage) : 100;

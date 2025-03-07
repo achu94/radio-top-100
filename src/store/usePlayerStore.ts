@@ -59,7 +59,7 @@ const usePlayerStore = create<PlayerState>((set, get) => ({
                 audioElement.remove();
             });
 
-            newHls.on(Hls.Events.ERROR, (event, data) => {
+            newHls.on(Hls.Events.ERROR, () => {
                 set({
                     isPlaying: false,
                     currentStationId: null,
@@ -67,8 +67,6 @@ const usePlayerStore = create<PlayerState>((set, get) => ({
                     hlsInstance: null,
                     isLoading: false,
                 });
-
-                console && console.log("HLS Error:", data);
             });
 
             // hls.js dont have event, which triggers on stream-play.

@@ -2,7 +2,7 @@ import { RadioStationDetails } from "@/lib/types/stations";
 
 export async function fetchStationDetails(stationId: string): Promise<RadioStationDetails> {
 
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
     const response = await fetch(`${baseUrl}/api/station/${stationId}`);
 
     if (!response.ok) {
